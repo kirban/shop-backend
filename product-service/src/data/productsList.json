@@ -1,0 +1,58 @@
+[
+  {
+    "count": 4,
+    "description": "Mass Effect 2",
+    "id": "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
+    "price": 2.4,
+    "title": "Mass Effect 2"
+  },
+  {
+    "count": 6,
+    "description": "Grand Theft Auto V",
+    "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a0",
+    "price": 10,
+    "title": "Grand Theft Auto V"
+  },
+  {
+    "count": 7,
+    "description": "Red Dead Redemption 2",
+    "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a2",
+    "price": 23,
+    "title": "Red Dead Redemption 2"
+  },
+  {
+    "count": 12,
+    "description": "Hitman 3",
+    "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a1",
+    "price": 15,
+    "title": "Hitman 3"
+  },
+  {
+    "count": 7,
+    "description": "FIFA 21",
+    "id": "7567ec4b-b10c-48c5-9345-fc73c48a80a3",
+    "price": 23,
+    "title": "FIFA 21"
+  },
+  {
+    "count": 8,
+    "description": "NHL 21",
+    "id": "7567ec4b-b10c-48c5-9345-fc73348a80a1",
+    "price": 25,
+    "title": "NHL 21"
+  },
+  {
+    "count": 2,
+    "description": "Civilization VI",
+    "id": "7567ec4b-b10c-48c5-9445-fc73c48a80a2",
+    "price": 23,
+    "title": "Civilization VI"
+  },
+  {
+    "count": 3,
+    "description": "Gran Turismo Sport",
+    "id": "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
+    "price": 15,
+    "title": "Gran Turismo Sport"
+  }
+]
