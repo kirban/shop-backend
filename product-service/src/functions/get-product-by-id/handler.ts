@@ -20,7 +20,7 @@ const getProductById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async 
       throw new Error(`Failed to find product with id "${productId}"`);
     } else {
       return formatJSONResponse({
-        product
+        ...product
       });
     }
   } catch (error) {
