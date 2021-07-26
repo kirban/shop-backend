@@ -4,13 +4,11 @@ import schema from './schema';
 //@ts-ignore
 import products from '../../data/productsList.json';
 
-const getAllProducts: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (_event, _context, callback) => {
+const getAllProducts: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async () => {
   try {
-    return formatJSONResponse({
-      ...products,
-    });
+    return formatJSONResponse(200, products);
   } catch (error) {
-    callback(null, { statusCode: 500, body: error.toString() })
+    return formatJSONResponse(500, { message: error.toString() });
   }
 }
 

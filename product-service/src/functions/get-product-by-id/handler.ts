@@ -10,7 +10,7 @@ import products from '../../data/productsList.json';
 import Product from 'src/types/Product';
 
 
-const getProductById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event, _context, callback) => {
+const getProductById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
   try {
     const { id: productId="" } = event.pathParameters;
 
@@ -19,12 +19,12 @@ const getProductById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async 
     if (!product) {
       throw new Error(`Failed to find product with id "${productId}"`);
     } else {
-      return formatJSONResponse({
+      return formatJSONResponse(200, {
         ...product
       });
     }
   } catch (error) {
-    callback(null, { statusCode: 404, body: error.toString() });
+    return formatJSONResponse(404, { message: error.toString() });
   }
 }
 
