@@ -5,16 +5,15 @@ import { formatJSONResponse } from '@libs/apiGateway';
 import { middyfy } from '@libs/lambda';
 
 import schema from './schema';
-//@ts-ignore
-import products from '../../data/productsList.json';
 import Product from 'src/types/Product';
+import { getProductByIdService } from 'src/services/product-service';
 
 
 const getProductById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
   try {
     const { id: productId="" } = event.pathParameters;
 
-    const product: Product = products.find((product: Product) => product.id === productId)
+    const product: Product = getProductByIdService(productId)
 
     if (!product) {
       throw new Error(`Failed to find product with id "${productId}"`);
